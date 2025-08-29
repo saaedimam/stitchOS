@@ -1,0 +1,64 @@
+{
+  "nav": {
+    "home": "Home",
+    "platform": "Platform",
+    "solutions": "Solutions",
+    "pricing": "Pricing",
+    "docs": "Docs",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "The Connected Loom",
+    "tagline": "Real-time RFID tracking for textiles."
+  },
+  "cta": {
+    "demo": "Book a demo",
+    "onepager": "Download one-pager"
+  },
+  "modules": {
+    "edgeIngest": "Edge Ingest",
+    "coreApi": "Core API",
+    "ledger": "Ledger",
+    "trace": "Trace",
+    "control": "Control",
+    "edgeIngestBlurb": "Readers, portals, handhelds—ingested securely at the edge.",
+    "coreApiBlurb": "Event pipeline, auth, RLS-ready data access.",
+    "ledgerBlurb": "Immutable trace of movements with signatures.",
+    "traceBlurb": "WIP, paths, audit trails across the floor.",
+    "controlBlurb": "Alerts, rules, automations for live ops."
+  },
+  "sections": {
+    "howItWorks": "How it works",
+    "outcomes": "Outcomes",
+    "ready": "Ready to connect your factory?"
+  },
+  "outcomes": {
+    "loss": "Reduce garment loss by 30–40%.",
+    "flow": "Faster flow with WIP caps & bottleneck alerts.",
+    "accountability": "Audit-ready trails and clear accountability."
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "privacy": "Privacy",
+    "terms": "Terms"
+  },
+  "form": {
+    "name": "Name",
+    "email": "Email",
+    "company": "Company",
+    "role": "Role",
+    "message": "Message",
+    "submit": "Send message",
+    "success": "Thanks — we’ll get back to you shortly."
+  },
+  "content": {
+    "brand": "StitchOS — The Connected Loom",
+    "tagline": "Real-time RFID tracking for textiles.",
+    "oneLine": "A SaaS + IoT platform that gives garment factories real-time visibility of bundles, uniforms, and inventory using UHF RFID—from floor to warehouse to laundry.",
+    "short": "StitchOS is a secure, modular RFID platform for textile production. Track WIP, reduce loss, speed onboarding, and make better decisions with live dashboards and alerts.",
+    "about": "StitchOS connects the factory floor with an RFID-first data backbone. We ingest reads from fixed portals and handhelds, apply rules, and expose clean events, KPIs, and audit trails to teams. The result: reliable throughput, lower shrinkage, and confident planning.",
+    "mission": "Make textile operations visible, predictable, and fair—through simple, secure, real-time software.",
+    "vision": "A connected loom for every factory: live data, zero guesswork."
+  }
+}
