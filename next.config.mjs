@@ -1,9 +1,10 @@
 import withPWA from "next-pwa";
+import createMDX from "@next/mdx";
 
 const isProd = process.env.NODE_ENV === "production";
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+const baseConfig = {
   reactStrictMode: true,
   experimental: {
     serverActions: {
@@ -45,12 +46,18 @@ const nextConfig = {
   },
 };
 
-export default withPWA({
-  dest: "public",
-  disable: !isProd,
-  register: true,
-  skipWaiting: true,
-  fallbacks: {
-    document: "/offline.html",
-  },
-})(nextConfig);
+const withMDX = createMDX({ extension: /\.mdx?$/ });
+
+export default withMDX(
+  withPWA({
+    dest: "public",
+    disable: !isProd,
+    register: true,
+    skipWaiting: true,
+    fallbacks: {
+      document: "/offline.html",
+    },
+  })(baseConfig)
+);
+
+export const pageExtensions = ["ts", "tsx", "mdx"];

@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  content: ["./src/**/*.{ts,tsx}"],
+  content: ["./src/**/*.{ts,tsx,mdx}"],
   darkMode: ["class"],
   theme: {
     extend: {
@@ -12,8 +12,7 @@ const config: Config = {
         offwhite: "#F6F7F9",
       },
       backgroundImage: {
-        weave:
-          "radial-gradient( circle at 25% 25%, rgba(11,31,58,0.12), transparent 40% ), radial-gradient( circle at 75% 75%, rgba(0,191,166,0.12), transparent 40% )",
+        weave: "radial-gradient( circle at 25% 25%, rgba(11,31,58,0.12), transparent 40% ), radial-gradient( circle at 75% 75%, rgba(0,191,166,0.12), transparent 40% )",
       },
       boxShadow: {
         glass: "0 8px 30px rgba(0,0,0,0.08)",
