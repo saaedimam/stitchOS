@@ -5,7 +5,7 @@ import SEO from "../../../next-seo.config";
 import "@/styles/globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { ThemeProvider } from "@/components/ThemeProvider";
+import { ThemeProvider } from "next-themes";
 import { getDictionary, type Locale } from "@/lib/i18n";
 import { Providers } from "@/components/Providers";
 
@@ -15,7 +15,7 @@ const outfit = Outfit({ subsets: ["latin"] });
 export const dynamic = "force-static";
 
 export async function generateMetadata({
-  params,
+  params
 }: {
   params: { locale: Locale };
 }): Promise<Metadata> {
@@ -26,23 +26,21 @@ export async function generateMetadata({
     alternates: {
       languages: {
         en: "/en",
-        bn: "/bn",
-      },
-    },
+        bn: "/bn"
+      }
+    }
   };
 }
 
 export default async function RootLayout({
   children,
-  params,
+  params
 }: {
   children: React.ReactNode;
   params: { locale: Locale };
 }) {
   const dict = await getDictionary(params.locale);
-  function t(k: string) {
-    return k.split(".").reduce((o: any, i: string) => (o ? o[i] : null), dict) ?? k;
-  }
+  const t = (k: string) => k.split(".").reduce((o: any, i: string) => (o ? o[i] : null), dict) ?? k;
 
   return (
     <html lang={params.locale} suppressHydrationWarning>
@@ -52,10 +50,8 @@ export default async function RootLayout({
         <meta name="color-scheme" content="light dark" />
       </head>
       <body className={`${inter.className} ${outfit.className}`}>
-        <a href="#main" className="skip-link">
-          Skip to content
-        </a>
-        <ThemeProvider>
+        <a href="#main" className="skip-link">Skip to content</a>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Providers>
             <Header locale={params.locale} t={t} />
             <main id="main">{children}</main>
