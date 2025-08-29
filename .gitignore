@@ -2,6 +2,9 @@ node_modules
 .next
 npm-debug.log
 .DS_Store
+.env
+.env.local
+pnpm-lock.yaml
 public/sw.js
 public/workbox-*.js
 public/fallback-*.js

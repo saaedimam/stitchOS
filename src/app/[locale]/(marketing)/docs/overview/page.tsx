@@ -1,27 +1,28 @@
-export default function DocsOverview() {
+import { getDictionary, type Locale } from "@/lib/i18n";
+
+export default async function DocsOverview({ params }: { params: { locale: Locale } }) {
+  const d = await getDictionary(params.locale);
+  const c = d.content;
   return (
     <div className="container-narrow py-16 prose prose-invert max-w-none">
       <h1>StitchOS — Overview</h1>
-      <p><strong>Brand:</strong> StitchOS — The Connected Loom</p>
-      <p><strong>Tagline:</strong> Real-time RFID tracking for textiles.</p>
       <p>
-        <strong>One-line pitch:</strong> A SaaS + IoT platform that gives garment
-        factories real-time visibility of bundles, uniforms, and inventory using
-        UHF RFID—from floor to warehouse to laundry.
+        <strong>Brand:</strong> {c.brand}
       </p>
       <p>
-        <strong>About:</strong> StitchOS connects the factory floor with an
-        RFID-first data backbone. We ingest reads from fixed portals and
-        handhelds, apply rules, and expose clean events, KPIs, and audit trails
-        to teams.
+        <strong>Tagline:</strong> {c.tagline}
       </p>
       <p>
-        <strong>Mission:</strong> Make textile operations visible, predictable,
-        and fair—through simple, secure, real-time software.
+        <strong>One-line pitch:</strong> {c.oneLine}
       </p>
       <p>
-        <strong>Vision:</strong> A connected loom for every factory: live data,
-        zero guesswork.
+        <strong>About:</strong> {c.about}
+      </p>
+      <p>
+        <strong>Mission:</strong> {c.mission}
+      </p>
+      <p>
+        <strong>Vision:</strong> {c.vision}
       </p>
     </div>
   );
