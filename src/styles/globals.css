@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light dark; }
+
+html, body {
+  @apply bg-offwhite text-charcoal dark:bg-charcoal dark:text-offwhite;
+}
+
+.glass {
+  @apply bg-white/30 dark:bg-white/10 backdrop-blur-md border border-white/20 shadow-glass;
+}
+
+.container-narrow {
+  @apply max-w-5xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.skip-link {
+  position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden;
+}
+.skip-link:focus { position:static; width:auto; height:auto; }
